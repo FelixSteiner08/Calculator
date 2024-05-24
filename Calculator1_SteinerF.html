@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator1</title>
+    <script>
+        function add2numbers() {
+            var num1 = document.getElementById("firstnumber").value * 1.0;
+            var num2 = document.getElementById("secondnumber").value * 1.0;
+            document.getElementById("result").innerHTML = num1 + num2;
+        }
+        
+        function subtract2numbers() {
+            var num1 = document.getElementById("firstnumber").value * 1.0;
+            var num2 = document.getElementById("secondnumber").value * 1.0;
+            document.getElementById("result").innerHTML = num1 - num2;
+        }
+
+        function multiply2numbers() {
+            var num1 = document.getElementById("firstnumber").value * 1.0;
+            var num2 = document.getElementById("secondnumber").value * 1.0;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function divide2numbers() {
+            var num1 = document.getElementById("firstnumber").value * 1.0;
+            var num2 = document.getElementById("secondnumber").value * 1.0;
+            if (num2 !== 0) {
+                document.getElementById("result").innerHTML = num1 / num2;
+            } else {
+                document.getElementById("result").innerHTML = "Durch 0 kann nicht dividiert werden.";
+            }
+        }
+
+        function average() {
+            var num1 = document.getElementById("firstnumber").value / 1.0;
+            var num2 = document.getElementById("secondnumber").value / 1.0;
+            document.getElementById("result").innerHTML = (num1 + num2) / 2.0;
+        }
+
+        function power() {
+            var num1 = document.getElementById("firstnumber").value * 1.0;
+            var num2 = document.getElementById("secondnumber").value * 1.0;
+            document.getElementById("result").innerHTML = Math.pow(num1, num2);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="myheading">
+        We are going to calculate
+    </h1>
+    <p>
+        <form>
+            <label for="firstnumber">Erste Zahl:</label>
+            <input type="text" id="firstnumber" name="firstnumber"><br><br>
+            <label for="secondnumber">Zweite Zahl:</label>
+            <input type="text" id="secondnumber" name="secondnumber"><br><br>
+        </form>
+    </p>
+    <button onclick="add2numbers()">
+        Addieren
+    </button>
+    <button onclick="subtract2numbers()">
+        Subtrahieren
+    </button>
+    <button onclick="multiply2numbers()">
+        Multiplizieren
+    </button>
+    <button onclick="divide2numbers()">
+        Dividieren
+    </button>
+    <button onclick="average()">
+        Durchschnitt berechnen
+    </button>
+    <button onclick="power()">
+        Potenzieren
+    </button>
+    <p id="result"></p>
+</body>
+</html>
